@@ -13,6 +13,19 @@ These are the sequences to make the models based on the ERD
 7. `Modifier` -> N:N join tables between `ModifierGroup` and `Item`
 8. `ItemModifierGroup`
 
+### General assumptions
+
+- Assumed that each table will have `id` and `timestamps` value for sanity check
+
+### Menu
+
+#### Properties
+
+- `identifier`: probably some sort of internal serial number for the model. A surrogate key perhaps.
+- `label`: human readable name for the customer
+- `state`: assumed that we can have multiple status for the menu (not a binary T/F)
+- `start_date` & `end_date`: assumed that each `menu` can be public on certain dates or public all the time
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
