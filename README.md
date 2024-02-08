@@ -4,27 +4,32 @@
 
 These are the sequences to make the models based on the ERD
 
-1. `Menu`
-2. `Section`
-3. `MenuSection` -> N:N join tables between `Menu` and `Section`
-4. `Item` -> Item is a polymorphic model because it can have multiple type
-5. `SectionItem` -> N:N join tables between `Section` and `Item`
+1. `Menu` ✅
+2. `Section` ✅
+3. `MenuSection` -> N:N join tables between `Menu` and `Section` ✅
+4. `Item` -> Item is a polymorphic model because it can have multiple type ✅
+5. `SectionItem` -> N:N join tables between `Section` and `Item` ✅
 6. `ModifierGroup`
 7. `Modifier` -> N:N join tables between `ModifierGroup` and `Item`
 8. `ItemModifierGroup`
 
 ### General assumptions
 
-- Assumed that each table will have `id` and `timestamps` value for sanity check
+- Assumed that each table will have `id` and `timestamps` value for sanity check ✅
+- `identifier`: probably some sort of internal serial number for the model. A surrogate key perhaps. ✅
+- `label`: human readable name for the customer ✅
 
 ### Menu
 
 #### Properties
 
-- `identifier`: probably some sort of internal serial number for the model. A surrogate key perhaps.
-- `label`: human readable name for the customer
 - `state`: assumed that we can have multiple status for the menu (not a binary T/F)
 - `start_date` & `end_date`: assumed that each `menu` can be public on certain dates or public all the time
+
+### Item
+
+- Assumed that it's a polymorphic model because it can be a `Product` item or `Component` item
+- We rename the `type` keyword to `item_type` because that's a reserved keyword
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
