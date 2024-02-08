@@ -28,7 +28,7 @@ These are the sequences to make the models based on the ERD
 
 ### Item
 
-- Assumed that it's a polymorphic model because it can be a `Product` item or `Component` item
+- Assumed that it's a STI model because it can be a `Product` item or `Component` item
 - We rename the `type` keyword to `item_type` because that's a reserved keyword
 
 This README would normally document whatever steps are necessary to get the
