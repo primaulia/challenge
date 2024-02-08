@@ -9,9 +9,9 @@ These are the sequences to make the models based on the ERD
 3. `MenuSection` -> N:N join tables between `Menu` and `Section` ✅
 4. `Item` -> Item is a polymorphic model because it can have multiple type ✅
 5. `SectionItem` -> N:N join tables between `Section` and `Item` ✅
-6. `ModifierGroup`
-7. `Modifier` -> N:N join tables between `ModifierGroup` and `Item`
-8. `ItemModifierGroup`
+6. `ModifierGroup` ✅
+7. `ItemModifierGroup` -> N:N join tables between `ModifierGroup` and `Item` ✅
+8. `Modifier` -> N:N join tables between `ModifierGroup` and `Component` `Item` ✅
 
 ### General assumptions
 
