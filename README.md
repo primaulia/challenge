@@ -12,6 +12,11 @@ These are the sequences to make the models based on the ERD
 6. `ModifierGroup` ✅
 7. `ItemModifierGroup` -> N:N join tables between `ModifierGroup` and `Item` ✅
 8. `Modifier` -> N:N join tables between `ModifierGroup` and `Component` `Item` ✅
+9. Setup seed data v1 ✅
+
+### To be confirmed?
+
+- What's the purpose of these `Menu` properties?: `state`, `start_date`, and `end_date`? --> Left it blank for now
 
 ### General assumptions
 
@@ -38,7 +43,11 @@ These are the sequences to make the models based on the ERD
 
 ### Validation assumed
 
-- `Menu` label and identifier must be present
+- All labels and identifiers must be present
+
+### Extra refactoring
+
+- Put the label and identifier standardizer within a concern ✅
 
 This README would normally document whatever steps are necessary to get the
 application up and running.

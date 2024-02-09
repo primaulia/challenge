@@ -8,6 +8,6 @@ module Identifiable
 
   def standardize_identifier
     # To make easy DB dump
-    self.identifier = label.downcase.split(' ').join('-')
+    self.identifier = label.downcase.split(' ').join('_')
   end
 end

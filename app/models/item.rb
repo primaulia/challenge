@@ -5,9 +5,8 @@ class Item < ApplicationRecord
 
   has_many :section_items
   has_many :sections, through: :section_items
-  has_many :item_modifier_groups
 
-  validates :type, inclusion: { in: %w[product component] }
+  validates :item_type, inclusion: { in: %w[product component] }
 
   # Define methods or scopes based on type if needed
   def product?
