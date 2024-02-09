@@ -31,6 +31,15 @@ These are the sequences to make the models based on the ERD
 - Assumed that it's a STI model because it can be a `Product` item or `Component` item
 - We rename the `type` keyword to `item_type` because that's a reserved keyword
 
+### Section
+
+- When a `section` is deleted, it will only delete the join tables, but not the actual tables with the has_many: :through
+- i.e. Deleting `Section` `Classic Pizzas` will not delete the menu, nor it will delete the `Margherita Pizza`
+
+### Validation assumed
+
+- `Menu` label and identifier must be present
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
