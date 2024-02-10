@@ -47,7 +47,12 @@ These are the sequences to make the models based on the ERD
 - Acts like a choice to modify a `Product` item
 - The `selection_required_[min|max]` represents that the end-user can choose one more modification to the item
   - e.g. `Margherita Pizza` can have 0 or 2 sauces
--
+- This model has two kinds of relationship with `Item`.
+  - If the item is a `Product`, Item can have a 1:N association to a `ModifierGroup`
+    ![Screenshot 2024-02-10 at 2 30 37 PM](https://github.com/primaulia/grain-challenge/assets/1294303/1568909a-102f-40fa-83f9-ad3cd0e127a7)
+  - If the item is a `Component`, `ModifierGroup` can have a 1:N association to the `Item`
+    ![Screenshot 2024-02-10 at 2 32 56 PM](https://github.com/primaulia/grain-challenge/assets/1294303/0c0683a9-547b-4f1b-b54f-9ba87c2eb43b)
+
 
 ### Validation assumed
 
