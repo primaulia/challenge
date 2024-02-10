@@ -41,7 +41,7 @@ These are the sequences to make the models based on the ERD
 ### Section
 
 - When a `section` is deleted, it will only delete the join tables, but not the actual tables with the has_many: :through
-- i.e. Deleting `Section` `Classic Pizzas` will not delete the menu, nor it will delete the `Margherita Pizza`
+- i.e. Deleting `Section` `Classic Pizzas` will not delete the `Pizza menu`, nor it will delete the `Margherita Pizza`
 
 ### ModifierGroup
 
