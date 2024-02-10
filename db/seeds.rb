@@ -23,24 +23,21 @@ item6 = section4.items.create!(label: 'Beer', item_type: 'product', price: 5.00)
 item7 = section4.items.create!(label: 'Wine', item_type: 'product', price: 6.00)
 
 puts 'Creating component items 📏'
-_10_inch_pizza = section1.items.create!(label: '10" Pizza', item_type: 'component', price: 0.00)
-_12_inch_pizza = section1.items.create!(label: '12" Pizza', item_type: 'component', price: 1.00)
+ten_inch_pizza = section1.items.create!(label: '10" Pizza', item_type: 'component', price: 0.00)
+twelve_inch_pizza = section1.items.create!(label: '12" Pizza', item_type: 'component', price: 1.00)
 regular_crust_pizza = section1.items.create!(label: '10" Pizza', item_type: 'component', price: 0.00)
 thicc_crust_pizza = section1.items.create!(label: '12" Pizza', item_type: 'component', price: 1.00)
 garlic_butter_sauce = section2.items.create!(label: 'Garlic Butter Sauce', item_type: 'component', price: 0.50)
 tomato_sauce = section2.items.create!(label: 'Tomato Sauce', item_type: 'component', price: 0.50)
 
 puts 'Create modifier groups ✏️'
-modifier_group1 = ModifierGroup.create!(label: 'Size', selection_required_min: 1,
-                                        selection_required_max: 1)
-modifier_group2 = ModifierGroup.create!(label: 'Crust', selection_required_min: 1,
-                                        selection_required_max: 1)
-modifier_group3 = ModifierGroup.create!(label: 'Sauce', selection_required_min: 1,
-                                        selection_required_max: 1)
+modifier_group1 = ModifierGroup.create!(label: 'Size', selection_required_min: 1, selection_required_max: 1)
+modifier_group2 = ModifierGroup.create!(label: 'Crust', selection_required_min: 1, selection_required_max: 1)
+modifier_group3 = ModifierGroup.create!(label: 'Sauce', selection_required_min: 1, selection_required_max: 1)
 
 puts 'Create modifiers 🚀'
-modifier1 = modifier_group1.modifiers.create(item: _10_inch_pizza)
-modifier2 = modifier_group1.modifiers.create(item: _12_inch_pizza)
+modifier1 = modifier_group1.modifiers.create(item: ten_inch_pizza)
+modifier2 = modifier_group1.modifiers.create(item: twelve_inch_pizza)
 modifier3 = modifier_group2.modifiers.create(item: regular_crust_pizza)
 modifier4 = modifier_group2.modifiers.create(item: thicc_crust_pizza)
 modifier5 = modifier_group3.modifiers.create(item: tomato_sauce)
