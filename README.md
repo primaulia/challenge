@@ -23,6 +23,8 @@ These are the sequences to make the models based on the ERD
 - Assumed that each table will have `id` and `timestamps` values for sanity check ✅
 - `identifier`: probably some internal serial number for the model. A surrogate key perhaps. ✅
 - `label`: human-readable name for the customer ✅
+- Assumed that there's no further subsection within a section
+- Assumed that there's no product item that gets bundled into another product item (i.e. meal product)
 
 ### Menu
 
