@@ -63,4 +63,28 @@ These are the sequences to make the models based on the ERD
 
 ## GraphQL
 
--
+Endpoint can all be tested [here](https://rocky-garden-09963-4854436a9bbe.herokuapp.com/graphiql).
+
+Here are some of the available queries and mutations on this published iteration.
+
+### Menu
+
+- Get all menus
+- Get a menu by id
+
+### Section
+
+- Get all sections
+- Get a section by id
+
+### Item
+
+- Get all items and the associated modifier and modifier groups
+- Get all product items
+- Get all component items
+- Get an item by id
+
+### Modifier Group
+
+- Get all modifier groups and the associated modifier and items
+- Get a modifier group by id
