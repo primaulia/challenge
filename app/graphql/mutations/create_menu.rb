@@ -5,7 +5,7 @@ module Mutations
     argument :start_date, GraphQL::Types::ISO8601Date, required: false
     argument :end_date, GraphQL::Types::ISO8601Date, required: false
 
-    field :menu, Types::MenuType, null: false
+    field :menu, Types::MenuType
     field :errors, [String], null: false
 
     def resolve(label:, state: nil, start_date: nil, end_date: nil)

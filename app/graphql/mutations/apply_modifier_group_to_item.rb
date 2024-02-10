@@ -3,7 +3,7 @@ module Mutations
     argument :item_id, ID, required: true
     argument :modifier_group_id, ID, required: true
 
-    field :item, Types::ItemType, null: false
+    field :item, Types::ItemType
     field :errors, [String], null: false
 
     def resolve(item_id:, modifier_group_id:)
@@ -21,7 +21,7 @@ module Mutations
       else
         {
           item: nil,
-          errors: 'Item or Modifier Group is not found or can\'t be linked'
+          errors: ['Item or Modifier Group is not found or can\'t be linked']
         }
       end
     end

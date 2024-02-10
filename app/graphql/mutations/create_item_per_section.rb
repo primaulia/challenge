@@ -4,7 +4,7 @@ module Mutations
     argument :label, String, required: true
     argument :item_type, Types::ItemTypeCategory, required: false
 
-    field :item, Types::ItemType, null: false
+    field :item, Types::ItemType
     field :errors, [String], null: false
 
     def resolve(section_id:, label:, item_type: 'product')

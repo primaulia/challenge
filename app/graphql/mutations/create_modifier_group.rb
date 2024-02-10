@@ -4,7 +4,7 @@ module Mutations
     argument :selection_required_min, Integer, required: false
     argument :selection_required_max, Integer, required: false
 
-    field :modifier_group, Types::ModifierGroupType, null: false
+    field :modifier_group, Types::ModifierGroupType
     field :errors, [String], null: false
 
     def resolve(label:, selection_required_min: 1, selection_required_max: 1)

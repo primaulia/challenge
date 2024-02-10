@@ -3,7 +3,7 @@ module Mutations
     argument :menu_id, ID, required: true
     argument :label, String, required: true
 
-    field :section, Types::SectionType, null: false
+    field :section, Types::SectionType
     field :errors, [String], null: false
 
     def resolve(menu_id:, label:)
