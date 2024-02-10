@@ -35,6 +35,10 @@ module Types
     field :items, [Types::ItemType], null: false,
                                      description: 'Return a list of items'
 
+    field :products, [Types::ItemType], null: false, description: 'Return a list of product items'
+
+    field :components, [Types::ItemType], null: false, description: 'Return a list of component items'
+
     field :modifiers, [Types::ModifierType], null: false,
                                              description: 'Return a list of modifiers'
 
@@ -56,6 +60,14 @@ module Types
 
     def items
       Item.all
+    end
+
+    def products
+      Item.products
+    end
+
+    def components
+      Item.components
     end
 
     # Member queries

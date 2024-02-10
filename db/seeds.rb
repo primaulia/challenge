@@ -25,8 +25,8 @@ item7 = section4.items.create!(label: 'Wine', item_type: :product, price: 6.00)
 puts 'Creating component items 📏'
 ten_inch_pizza = section1.items.create!(label: '10" Pizza', item_type: :component, price: 0.00)
 twelve_inch_pizza = section1.items.create!(label: '12" Pizza', item_type: :component, price: 1.00)
-regular_crust_pizza = section1.items.create!(label: '10" Pizza', item_type: :component, price: 0.00)
-thicc_crust_pizza = section1.items.create!(label: '12" Pizza', item_type: :component, price: 1.00)
+regular_crust_pizza = section1.items.create!(label: 'Regular Crust Pizza', item_type: :component, price: 0.00)
+thicc_crust_pizza = section1.items.create!(label: 'Stuffed Crust Pizza', item_type: :component, price: 1.00)
 garlic_butter_sauce = section2.items.create!(label: 'Garlic Butter Sauce', item_type: :component, price: 0.50)
 tomato_sauce = section2.items.create!(label: 'Tomato Sauce', item_type: :component, price: 0.50)
 
