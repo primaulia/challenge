@@ -7,7 +7,7 @@ module Types
     field :label, String, null: false
     field :description, String
     field :price, Float
-    field :item_type, Integer
+    field :item_type, Types::ItemTypeCategory, null: false
     field :sections, [Types::SectionType], null: true
     field :modifier_groups, [Types::ModifierGroupType], null: true
     field :modifier, Types::ModifierType, null: true
