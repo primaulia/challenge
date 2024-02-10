@@ -64,4 +64,4 @@ group :test do
 end
 
 gem 'factory_bot', '~> 6.4'
-gem 'graphiql-rails', group: :development
+gem 'graphiql-rails'
