@@ -60,3 +60,7 @@ These are the sequences to make the models based on the ERD
 ### Extra refactoring
 
 - Put the label and identifier standardizer within a concern ✅
+
+## GraphQL
+
+-
