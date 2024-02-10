@@ -38,6 +38,9 @@ module Types
     field :modifier_groups, [Types::ModifierGroupType], null: false,
                                                         description: 'Return a list of modifier groups'
 
+    field :items, [Types::ItemType], null: false,
+                                     description: 'Return a list of items'
+
     def menus
       Menu.all
     end
