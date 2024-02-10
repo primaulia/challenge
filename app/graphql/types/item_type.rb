@@ -10,6 +10,7 @@ module Types
     field :item_type, Integer
     field :sections, [Types::SectionType], null: true
     field :modifier_groups, [Types::ModifierGroupType], null: true
+    field :modifier, Types::ModifierType, null: true
     field :created_at, GraphQL::Types::ISO8601DateTime, null: false
     field :updated_at, GraphQL::Types::ISO8601DateTime, null: false
   end

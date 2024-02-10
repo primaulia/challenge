@@ -41,6 +41,9 @@ module Types
     field :items, [Types::ItemType], null: false,
                                      description: 'Return a list of items'
 
+    field :modifiers, [Types::ModifierType], null: false,
+                                             description: 'Return a list of modifiers'
+
     def menus
       Menu.all
     end
@@ -51,6 +54,14 @@ module Types
 
     def modifier_groups
       ModifierGroup.all
+    end
+
+    def modifiers
+      Modifier.all
+    end
+
+    def items
+      Item.all
     end
   end
 end
