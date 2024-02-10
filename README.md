@@ -34,9 +34,8 @@ These are the sequences to make the models based on the ERD
 ### Item
 
 - Assumed that it's an STI model because it can be a `Product` item or `Component` item
-- For simplicity, we rename the `type` keyword to `item_type` because that's a reserved keyword
-![Screenshot 2024-02-10 at 1 30 20 PM](https://github.com/primaulia/grain-challenge/assets/1294303/2b9e5398-5907-4155-911c-b19995c8ebd2)
-
+- For simplicity, we rename the `type` keyword to `item_type` because `type` is a reserved keyword
+  ![Screenshot 2024-02-10 at 1 30 20 PM](https://github.com/primaulia/grain-challenge/assets/1294303/2b9e5398-5907-4155-911c-b19995c8ebd2)
 
 ### Section
 
