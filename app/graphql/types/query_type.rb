@@ -30,10 +30,24 @@ module Types
     # end
 
     field :menus, [Types::MenuType], null: false,
-                                     description: 'An example field added by the generator'
+                                     description: 'Return a list of menus'
+
+    field :sections, [Types::SectionType], null: false,
+                                           description: 'Return a list of sections'
+
+    field :modifier_groups, [Types::ModifierGroupType], null: false,
+                                                        description: 'Return a list of modifier groups'
 
     def menus
       Menu.all
+    end
+
+    def sections
+      Section.all
+    end
+
+    def modifier_groups
+      ModifierGroup.all
     end
   end
 end

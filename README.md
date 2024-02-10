@@ -53,7 +53,6 @@ These are the sequences to make the models based on the ERD
   - If the item is a `Component`, `ModifierGroup` can have a 1:N association to the `Item`
     ![Screenshot 2024-02-10 at 2 32 56 PM](https://github.com/primaulia/grain-challenge/assets/1294303/0c0683a9-547b-4f1b-b54f-9ba87c2eb43b)
 
-
 ### Validation assumed
 
 - All labels and identifiers must be present
@@ -61,26 +60,3 @@ These are the sequences to make the models based on the ERD
 ### Extra refactoring
 
 - Put the label and identifier standardizer within a concern ✅
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-- Ruby version
-
-- System dependencies
-
-- Configuration
-
-- Database creation
-
-- Database initialization
-
-- How to run the test suite
-
-- Services (job queues, cache servers, search engines, etc.)
-
-- Deployment instructions
-
-- ...
