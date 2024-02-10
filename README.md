@@ -56,6 +56,8 @@ These are the sequences to make the models based on the ERD
 ### Validation assumed
 
 - All labels and identifiers must be present
+- The `selection_required_min|man` must be validated
+- Each join table values must be unique
 
 ### Extra refactoring
 
