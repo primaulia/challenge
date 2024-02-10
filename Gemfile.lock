@@ -93,6 +93,9 @@ GEM
       activesupport (>= 5.0.0)
     globalid (1.2.1)
       activesupport (>= 6.1)
+    graphiql-rails (1.9.0)
+      railties
+      sprockets-rails
     graphql (2.2.8)
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
@@ -213,6 +216,7 @@ DEPENDENCIES
   capybara
   debug
   factory_bot (~> 6.4)
+  graphiql-rails
   graphql
   jbuilder
   puma (~> 5.0)
