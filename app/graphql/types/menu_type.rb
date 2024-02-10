@@ -6,6 +6,7 @@ module Types
     field :identifier, String, null: false
     field :label, String, null: false
     field :state, String
+    field :sections, [Types::SectionType], null: true
     field :start_date, GraphQL::Types::ISO8601Date
     field :end_date, GraphQL::Types::ISO8601Date
     field :created_at, GraphQL::Types::ISO8601DateTime, null: false
