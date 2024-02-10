@@ -1,6 +1,6 @@
 module Mutations
-  class CreateSection < Mutations::BaseMutation
-    argument :menu_id, ID
+  class CreateSectionPerMenu < Mutations::BaseMutation
+    argument :menu_id, ID, required: true
     argument :label, String, required: true
 
     field :section, Types::SectionType, null: false
