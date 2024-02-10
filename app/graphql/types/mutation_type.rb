@@ -6,5 +6,6 @@ module Types
     field :create_section_per_menu, mutation: Mutations::CreateSectionPerMenu
     field :create_modifier_group, mutation: Mutations::CreateModifierGroup
     field :create_item_per_section, mutation: Mutations::CreateItemPerSection
+    field :apply_modifier_group_to_item, mutation: Mutations::ApplyModifierGroupToItem
   end
 end
