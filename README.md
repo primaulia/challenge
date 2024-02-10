@@ -26,25 +26,25 @@ These are the sequences to make the models based on the ERD
 - Assumed that there's no further subsection within a section
 - Assumed that there's no product item that gets bundled into another product item (i.e. meal product)
 
-### Menu
+#### Menu
 
-#### Properties
+##### Properties
 
 - `state`: assumed that we can have multiple statuses for the menu (not a binary True/False)
 - `start_date` & `end_date`: assumed that each `menu` can be public on certain dates or public all the time
 
-### Item
+#### Item
 
 - Assumed that it's an STI model because it can be a `Product` item or `Component` item
 - For simplicity, we rename the `type` keyword to `item_type` because `type` is a reserved keyword
   ![Screenshot 2024-02-10 at 1 30 20 PM](https://github.com/primaulia/grain-challenge/assets/1294303/2b9e5398-5907-4155-911c-b19995c8ebd2)
 
-### Section
+#### Section
 
 - When a `section` is deleted, it will only delete the join tables, but not the actual tables with the has_many: :through
 - i.e. Deleting `Section` `Classic Pizzas` will not delete the `Pizza menu`, nor it will delete the `Margherita Pizza`
 
-### ModifierGroup
+#### ModifierGroup
 
 - Acts like a choice to modify a `Product` item
 - The `selection_required_[min|max]` represents that the end-user can choose one more modification to the item
