@@ -65,8 +65,35 @@ module Types
                                     argument :id, ID, required: true
                                   end
 
+    field :section, Types::SectionType, null: false,
+                                        description: 'Return one section by id' do
+      argument :id, ID, required: true
+    end
+
+    field :modifier_group, Types::ModifierGroupType, null: false,
+                                                     description: 'Return one modifier group by id' do
+      argument :id, ID, required: true
+    end
+
+    field :item, Types::ItemType, null: false,
+                                  description: 'Return one item by id' do
+      argument :id, ID, required: true
+    end
+
     def menu(id:)
       Menu.find(id)
+    end
+
+    def section(id:)
+      Section.find(id)
+    end
+
+    def modifier_group(id:)
+      ModifierGroup.find(id)
+    end
+
+    def item(id:)
+      Item.find(id)
     end
   end
 end
