@@ -1,7 +1,5 @@
 module Mutations
   class CreateMenu < Mutations::BaseMutation
-    null true
-
     argument :label, String, required: true
     argument :state, String, required: false
     argument :start_date, GraphQL::Types::ISO8601Date, required: false
