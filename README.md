@@ -45,9 +45,9 @@ These are the sequences to make the models based on the ERD
 
 ### ModifierGroup
 
-- Acts like a choice to modify an `Product` item
-- The `selection_required_[min|max]` represents that end-user can choose one more more modifications to the item
-  - e.g. `Margharita Pizza` can have 0 or 2 sauces
+- Acts like a choice to modify a `Product` item
+- The `selection_required_[min|max]` represents that the end-user can choose one more modification to the item
+  - e.g. `Margherita Pizza` can have 0 or 2 sauces
 -
 
 ### Validation assumed
