@@ -22,13 +22,7 @@ module Types
     # Add root-level fields here.
     # They will be entry points for queries on your schema.
 
-    # TODO: remove me
-    # field :test_field, String, null: false,
-    #   description: "An example field added by the generator"
-    # def test_field
-    #   "Hello World!"
-    # end
-
+    # Collection queries
     field :menus, [Types::MenuType], null: false,
                                      description: 'Return a list of menus'
 
@@ -62,6 +56,17 @@ module Types
 
     def items
       Item.all
+    end
+
+    # Member queries
+
+    field :menu, Types::MenuType, null: false,
+                                  description: 'Return one menu by id' do
+                                    argument :id, ID, required: true
+                                  end
+
+    def menu(id:)
+      Menu.find(id)
     end
   end
 end
