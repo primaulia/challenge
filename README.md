@@ -7,7 +7,7 @@ These are the sequences to make the models based on the ERD
 1. `Menu` ✅
 2. `Section` ✅
 3. `MenuSection` -> N:N join tables between `Menu` and `Section` ✅
-4. `Item` -> Item is an STI model because it can have multiple type ✅
+4. `Item` -> Item is an STI model because it can have multiple types ✅
 5. `SectionItem` -> N:N join tables between `Section` and `Item` ✅
 6. `ModifierGroup` ✅
 7. `ItemModifierGroup` -> N:N join tables between `ModifierGroup` and `Item` ✅
@@ -20,21 +20,23 @@ These are the sequences to make the models based on the ERD
 
 ### General assumptions
 
-- Assumed that each table will have `id` and `timestamps` value for sanity check ✅
-- `identifier`: probably some sort of internal serial number for the model. A surrogate key perhaps. ✅
-- `label`: human readable name for the customer ✅
+- Assumed that each table will have `id` and `timestamps` values for sanity check ✅
+- `identifier`: probably some internal serial number for the model. A surrogate key perhaps. ✅
+- `label`: human-readable name for the customer ✅
 
 ### Menu
 
 #### Properties
 
-- `state`: assumed that we can have multiple status for the menu (not a binary True/False)
+- `state`: assumed that we can have multiple statuses for the menu (not a binary True/False)
 - `start_date` & `end_date`: assumed that each `menu` can be public on certain dates or public all the time
 
 ### Item
 
-- Assumed that it's a STI model because it can be a `Product` item or `Component` item
+- Assumed that it's an STI model because it can be a `Product` item or `Component` item
 - For simplicity, we rename the `type` keyword to `item_type` because that's a reserved keyword
+![Screenshot 2024-02-10 at 1 30 20 PM](https://github.com/primaulia/grain-challenge/assets/1294303/2b9e5398-5907-4155-911c-b19995c8ebd2)
+
 
 ### Section
 
