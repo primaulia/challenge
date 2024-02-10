@@ -7,7 +7,7 @@ These are the sequences to make the models based on the ERD
 1. `Menu` ✅
 2. `Section` ✅
 3. `MenuSection` -> N:N join tables between `Menu` and `Section` ✅
-4. `Item` -> Item is an STI model because it can have multiple type ✅
+4. `Item` -> Item is an STI model because it can have multiple types ✅
 5. `SectionItem` -> N:N join tables between `Section` and `Item` ✅
 6. `ModifierGroup` ✅
 7. `ItemModifierGroup` -> N:N join tables between `ModifierGroup` and `Item` ✅
@@ -20,32 +20,34 @@ These are the sequences to make the models based on the ERD
 
 ### General assumptions
 
-- Assumed that each table will have `id` and `timestamps` value for sanity check ✅
-- `identifier`: probably some sort of internal serial number for the model. A surrogate key perhaps. ✅
-- `label`: human readable name for the customer ✅
+- Assumed that each table will have `id` and `timestamps` values for sanity check ✅
+- `identifier`: probably some internal serial number for the model. A surrogate key perhaps. ✅
+- `label`: human-readable name for the customer ✅
 
 ### Menu
 
 #### Properties
 
-- `state`: assumed that we can have multiple status for the menu (not a binary True/False)
+- `state`: assumed that we can have multiple statuses for the menu (not a binary True/False)
 - `start_date` & `end_date`: assumed that each `menu` can be public on certain dates or public all the time
 
 ### Item
 
-- Assumed that it's a STI model because it can be a `Product` item or `Component` item
+- Assumed that it's an STI model because it can be a `Product` item or `Component` item
 - For simplicity, we rename the `type` keyword to `item_type` because that's a reserved keyword
+![Screenshot 2024-02-10 at 1 30 20 PM](https://github.com/primaulia/grain-challenge/assets/1294303/2b9e5398-5907-4155-911c-b19995c8ebd2)
+
 
 ### Section
 
 - When a `section` is deleted, it will only delete the join tables, but not the actual tables with the has_many: :through
-- i.e. Deleting `Section` `Classic Pizzas` will not delete the menu, nor it will delete the `Margherita Pizza`
+- i.e. Deleting `Section` `Classic Pizzas` will not delete the `Pizza menu`, nor it will delete the `Margherita Pizza`
 
 ### ModifierGroup
 
-- Acts like a choice to modify an `Product` item
-- The `selection_required_[min|max]` represents that end-user can choose one more more modifications to the item
-  - e.g. `Margharita Pizza` can have 0 or 2 sauces
+- Acts like a choice to modify a `Product` item
+- The `selection_required_[min|max]` represents that the end-user can choose one more modification to the item
+  - e.g. `Margherita Pizza` can have 0 or 2 sauces
 -
 
 ### Validation assumed
