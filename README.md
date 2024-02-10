@@ -25,6 +25,7 @@ These are the sequences to make the models based on the ERD
 - `label`: human-readable name for the customer ✅
 - Assumed that there's no further subsection within a section
 - Assumed that there's no product item that gets bundled into another product item (i.e. meal product)
+- For reference, I've made a [sample table data structure](https://docs.google.com/spreadsheets/d/1S4lpWa5gyv4wDG6tF1dYOjXQe59dI2GACvaRruEHMkA/edit?usp=sharing) that can be referred here
 
 #### Menu
 
