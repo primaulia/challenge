@@ -60,6 +60,7 @@ These are the sequences to make the models based on the ERD
 ### Extra refactoring
 
 - Put the label and identifier standardizer within a concern ✅
+- Put the display order validator in a concern ✅
 
 ## GraphQL
 
@@ -71,11 +72,13 @@ Here are some of the available queries and mutations on this published iteration
 
 - Get all menus
 - Get a menu by id
+- Create a new menu
 
 ### Section
 
 - Get all sections
 - Get a section by id
+- Create a new section per menu
 
 ### Item
 
@@ -83,8 +86,12 @@ Here are some of the available queries and mutations on this published iteration
 - Get all product items
 - Get all component items
 - Get an item by id
+- Create a new item per section
+- Link an item to a modifier group (product item only)
 
 ### Modifier Group
 
 - Get all modifier groups and the associated modifier and items
 - Get a modifier group by id
+- Create a new modifier group
+- Link a modifier to an item (component item only)
