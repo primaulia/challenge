@@ -9,6 +9,7 @@ module Types
     field :price, Float
     field :item_type, Integer
     field :sections, [Types::SectionType], null: true
+    field :modifier_groups, [Types::ModifierGroupType], null: true
     field :created_at, GraphQL::Types::ISO8601DateTime, null: false
     field :updated_at, GraphQL::Types::ISO8601DateTime, null: false
   end
