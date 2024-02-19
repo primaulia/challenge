@@ -31,7 +31,7 @@ section_one_products.each do |product|
     label: product,
     item_type: :product,
     description: Faker::Food.description,
-    price: rand(1..100) + 0.99,
+    price: rand(1..25) + 0.99,
     available: [true, false].sample,
     image_url:
   )
@@ -46,7 +46,7 @@ section_two_products.each do |product|
     label: product,
     item_type: :product,
     description: Faker::Food.description,
-    price: rand(1..100) + 0.99,
+    price: rand(1..25) + 0.99,
     available: [true, false].sample,
     image_url:
   )
@@ -61,7 +61,7 @@ section_three_products.each do |product|
     label: product,
     item_type: :product,
     description: Faker::Food.description,
-    price: rand(1..100) + 0.99,
+    price: rand(1..25) + 0.99,
     available: [true, false].sample,
     image_url:
   )
