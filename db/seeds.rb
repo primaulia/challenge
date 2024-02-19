@@ -9,18 +9,22 @@ menu2 = Menu.create!(label: 'Drinks Menu')
 
 puts 'Creating sections 🗒️'
 section1 = menu1.sections.create!(label: 'Classic Pizzas', description: 'This is a section about Classic Pizzas')
-section2 = menu1.sections.create!(label: 'Gourmet Pizzas', description: 'This is a section about Gourmet Pizzas')
+section2 = menu1.sections.create!(label: 'Gourmet Pizzas', description: 'This is a section about Gourmet Pizzas',
+                                  available: false)
 section3 = menu2.sections.create!(label: 'Soft Drinks', description: 'This is for the softie')
 section4 = menu2.sections.create!(label: 'Alcoholic Drinks', description: 'This is for the haram')
 
 puts 'Creating product items 🍔'
-item1 = section1.items.create!(label: 'Margherita Pizza', item_type: :product, price: 12.99)
-item2 = section1.items.create!(label: 'Pepperoni Pizza', item_type: :product, price: 13.99)
-item3 = section2.items.create!(label: 'Hawaiian Pizza', item_type: :product, price: 14.99)
-item4 = section3.items.create!(label: 'Coca-Cola', item_type: :product, price: 2.50)
-item5 = section3.items.create!(label: 'Sprite', item_type: :product, price: 2.50)
-item6 = section4.items.create!(label: 'Beer', item_type: :product, price: 5.00)
-item7 = section4.items.create!(label: 'Wine', item_type: :product, price: 6.00)
+item1 = section1.items.create!(label: 'Margherita Pizza', item_type: :product, price: 12.99,
+                               available: [true, false].sample)
+item2 = section1.items.create!(label: 'Pepperoni Pizza', item_type: :product, price: 13.99,
+                               available: [true, false].sample)
+item3 = section2.items.create!(label: 'Hawaiian Pizza', item_type: :product, price: 14.99,
+                               available: [true, false].sample)
+item4 = section3.items.create!(label: 'Coca-Cola', item_type: :product, price: 2.50, available: [true, false].sample)
+item5 = section3.items.create!(label: 'Sprite', item_type: :product, price: 2.50, available: [true, false].sample)
+item6 = section4.items.create!(label: 'Beer', item_type: :product, price: 5.00, available: [true, false].sample)
+item7 = section4.items.create!(label: 'Wine', item_type: :product, price: 6.00, available: [true, false].sample)
 
 puts 'Creating component items 📏'
 ten_inch_pizza = section1.items.create!(label: '10" Pizza', item_type: :component, price: 0.00)
