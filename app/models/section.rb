@@ -13,4 +13,12 @@ class Section < ApplicationRecord
     menu_sections.destroy_all
     section_items.destroy_all
   end
+
+  def products
+    items.products
+  end
+
+  def components
+    items.components
+  end
 end
