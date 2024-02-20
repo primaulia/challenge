@@ -23,7 +23,7 @@ section_one_products = ['Margherita Pizza', 'Pepperoni Pizza', 'Mushroom Pizza',
                         'Four Cheese Pizza']
 section_two_products = ['Hawaiian Pizza', 'Spinach Artichoke Pizza', 'Prosciutto e Funghi Pizza',
                         'Quattro Stagioni Pizza']
-section_pasta_products = ['Spaghetti Bolognaise', 'Penne Arrabbiata', 'Fettuccine Alfredo', 'Carbonara', 'Aglio Olio',
+section_pasta_products = ['Spaghetti Bolognaise', 'Penne Arrabbiata Pasta', 'Fettuccine Alfredo', 'Carbonara Pasta', 'Aglio Olio Pasta',
                           'Spaghetti alle Vongole', 'Seafood Alfredo', 'Pasta Primavera']
 section_three_products = ['Coca-Cola', 'Ginger Ale', 'Iced Lemon Tea', 'Cappuccino', 'Hot Tea']
 section_four_products = ['Beer', 'Red Wine', 'White Wine', 'Aperol', 'Limoncello', 'Campari']
