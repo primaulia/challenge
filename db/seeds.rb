@@ -10,22 +10,22 @@ menu1 = Menu.create!(label: 'Pizza Menu')
 menu2 = Menu.create!(label: 'Drinks Menu')
 
 puts 'Creating sections 🗒️'
-section1 = menu1.sections.create!(label: 'Classic Pizzas', description: 'Here\'s a selection of our favourite dishes 🍕')
+section1 = menu1.sections.create!(label: 'Classic Pizzas',
+                                  description: 'Here is our selection of our favourite dishes 🍕')
 section2 = menu1.sections.create!(label: 'Gourmet Pizzas',
                                   description: 'Indulge your taste buds with our seasonal pizzas 🇮🇹', available: false)
-section3 = menu1.sections.create!(label: 'Pasta', description: 'Noodles but make it Italian 🍝', available: false)
+section5 = menu1.sections.create!(label: 'Pastas', description: 'Noodles but make it Italian 🍝', available: false)
 
 section3 = menu2.sections.create!(label: 'Soft Drinks')
 section4 = menu2.sections.create!(label: 'Alcoholic Drinks')
-section5 = menu1.sections.create!(label: 'Pastas')
-
 puts 'Creating product items 🍔'
-section_one_products = ['Margherita Pizza', 'Pepperoni Pizza', 'Marinara Pizza', 'Mushroom Pizza',
-                        'Quattro Formagi Pizza']
-section_two_products = ['Hawaiian Pizza', 'Spinach Artichoeke Pizza', 'Prosciutto e Funghi Pizza',
+section_one_products = ['Margherita Pizza', 'Pepperoni Pizza', 'Mushroom Pizza',
+                        'Four Cheese Pizza']
+section_two_products = ['Hawaiian Pizza', 'Spinach Artichoke Pizza', 'Prosciutto e Funghi Pizza',
                         'Quattro Stagioni Pizza']
-section_pasta_products = ['Spaghetti Bolognaise', 'Penne Arrabiata', 'Cacio e Pepe', 'Carbonara', 'Aglio Olio']
-section_three_products = ['Coca-Cola', 'Fanta', 'Ginger Ale', 'Iced Lemon Tea', 'Cappuccino', 'Hot Tea']
+section_pasta_products = ['Spaghetti Bolognaise', 'Penne Arrabbiata', 'Fettuccine Alfredo', 'Carbonara', 'Aglio Olio',
+                          'Spaghetti alle Vongole', 'Seafood Alfredo', 'Pasta Primavera']
+section_three_products = ['Coca-Cola', 'Ginger Ale', 'Iced Lemon Tea', 'Cappuccino', 'Hot Tea']
 section_four_products = ['Beer', 'Red Wine', 'White Wine', 'Aperol', 'Limoncello', 'Campari']
 
 section_one_products.each do |product|
@@ -102,21 +102,6 @@ section_pasta_products.each do |product|
     image_url:
   )
 end
-
-# item1 = section1.items.create!(label: 'Margherita Pizza', item_type: :product, price: 12.99,
-#                                available: [true, false].sample, image_url: Faker::LoremFlickr.image(size: '480x480', search_terms: %w[Food Margherita-Pizza]))
-# item2 = section1.items.create!(label: 'Pepperoni Pizza', item_type: :product, price: 13.99,
-#                                available: [true, false].sample, image_url: Faker::LoremFlickr.image(size: '480x480', search_terms: %w[Food Pepperoni-Pizza]))
-# item3 = section2.items.create!(label: 'Hawaiian Pizza', item_type: :product, price: 14.99,
-#                                available: [true, false].sample, image_url: Faker::LoremFlickr.image(size: '480x480', search_terms: %w[Food Hawaiian-Pizza]))
-# item4 = section3.items.create!(label: 'Coca-Cola', item_type: :product, price: 2.50, available: [true, false].sample,
-#                                image_url: Faker::LoremFlickr.image(size: '480x480', search_terms: %w[Food Coca-Cola]))
-# item5 = section3.items.create!(label: 'Sprite', item_type: :product, price: 2.50, available: [true, false].sample,
-#                                image_url: Faker::LoremFlickr.image(size: '480x480', search_terms: %w[Drink Sprite]))
-# item6 = section4.items.create!(label: 'Beer', item_type: :product, price: 5.00, available: [true, false].sample,
-#                                image_url: Faker::LoremFlickr.image(size: '480x480', search_terms: %w[Drink Beer]))
-# item7 = section4.items.create!(label: 'Wine', item_type: :product, price: 6.00, available: [true, false].sample,
-#                                image_url: Faker::LoremFlickr.image(size: '480x480', search_terms: %w[Drink Wine]))
 
 puts 'Creating component items 📏'
 ten_inch_pizza = section1.items.create!(label: '10" Pizza', item_type: :component, price: 0.00)
