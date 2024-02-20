@@ -10,22 +10,28 @@ menu1 = Menu.create!(label: 'Pizza Menu')
 menu2 = Menu.create!(label: 'Drinks Menu')
 
 puts 'Creating sections 🗒️'
-section1 = menu1.sections.create!(label: 'Classic Pizzas', description: 'This is a section about Classic Pizzas')
-section2 = menu1.sections.create!(label: 'Gourmet Pizzas', description: 'This is a section about Gourmet Pizzas',
-                                  available: false)
-section3 = menu2.sections.create!(label: 'Soft Drinks', description: 'This is for the softie')
-section4 = menu2.sections.create!(label: 'Alcoholic Drinks', description: 'This is for the haram')
+section1 = menu1.sections.create!(label: 'Classic Pizzas', description: 'Here\'s a selection of our favourite dishes 🍕')
+section2 = menu1.sections.create!(label: 'Gourmet Pizzas',
+                                  description: 'Indulge your taste buds with our seasonal pizzas 🇮🇹', available: false)
+section3 = menu1.sections.create!(label: 'Pasta', description: 'Noodles but make it Italian 🍝', available: false)
+
+section3 = menu2.sections.create!(label: 'Soft Drinks')
+section4 = menu2.sections.create!(label: 'Alcoholic Drinks')
+section5 = menu1.sections.create!(label: 'Pastas')
 
 puts 'Creating product items 🍔'
-section_one_products = ['Margherita Pizza', 'Pepperoni Pizza']
-section_two_products = ['Hawaiian Pizza']
-section_three_products = ['Coca-Cola']
-section_four_products = %w[Beer Wine]
+section_one_products = ['Margherita Pizza', 'Pepperoni Pizza', 'Marinara Pizza', 'Mushroom Pizza',
+                        'Quattro Formagi Pizza']
+section_two_products = ['Hawaiian Pizza', 'Spinach Artichoeke Pizza', 'Prosciutto e Funghi Pizza',
+                        'Quattro Stagioni Pizza']
+section_pasta_products = ['Spaghetti Bolognaise', 'Penne Arrabiata', 'Cacio e Pepe', 'Carbonara', 'Aglio Olio']
+section_three_products = ['Coca-Cola', 'Fanta', 'Ginger Ale', 'Iced Lemon Tea', 'Cappuccino', 'Hot Tea']
+section_four_products = ['Beer', 'Red Wine', 'White Wine', 'Aperol', 'Limoncello', 'Campari']
 
 section_one_products.each do |product|
   url = "https://pixabay.com/api/?key=42454135-baff0b2d7d0390ff75be2a8eb&q=#{product.downcase.split(' ').join('+')}&image_type=photo&safesearch=true"
   response = JSON.parse(RestClient.get(url))
-  image_url = response['hits'].first['webformatURL']
+  image_url = response['hits']&.first&.[]('webformatURL')
 
   section1.items.create!(
     label: product,
@@ -40,7 +46,7 @@ end
 section_two_products.each do |product|
   url = "https://pixabay.com/api/?key=42454135-baff0b2d7d0390ff75be2a8eb&q=#{product.downcase.split(' ').join('+')}&image_type=photo&safesearch=true"
   response = JSON.parse(RestClient.get(url))
-  image_url = response['hits'].first['webformatURL']
+  image_url = response['hits']&.first&.[]('webformatURL')
 
   section2.items.create!(
     label: product,
@@ -55,7 +61,7 @@ end
 section_three_products.each do |product|
   url = "https://pixabay.com/api/?key=42454135-baff0b2d7d0390ff75be2a8eb&q=#{product.downcase.split(' ').join('+')}&image_type=photo&safesearch=true"
   response = JSON.parse(RestClient.get(url))
-  image_url = response['hits'].first['webformatURL']
+  image_url = response['hits']&.first&.[]('webformatURL')
 
   section3.items.create!(
     label: product,
@@ -70,9 +76,24 @@ end
 section_four_products.each do |product|
   url = "https://pixabay.com/api/?key=42454135-baff0b2d7d0390ff75be2a8eb&q=#{product.downcase.split(' ').join('+')}&image_type=photo&safesearch=true"
   response = JSON.parse(RestClient.get(url))
-  image_url = response['hits'].first['webformatURL']
+  image_url = response['hits']&.first&.[]('webformatURL')
 
   section4.items.create!(
+    label: product,
+    item_type: :product,
+    description: Faker::Food.description,
+    price: rand(1..25) + 0.99,
+    available: [true, false].sample,
+    image_url:
+  )
+end
+
+section_pasta_products.each do |product|
+  url = "https://pixabay.com/api/?key=42454135-baff0b2d7d0390ff75be2a8eb&q=#{product.downcase.split(' ').join('+')}&image_type=photo&safesearch=true"
+  response = JSON.parse(RestClient.get(url))
+  image_url = response['hits']&.first&.[]('webformatURL')
+
+  section5.items.create!(
     label: product,
     item_type: :product,
     description: Faker::Food.description,
