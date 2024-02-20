@@ -1,5 +1,4 @@
-# Thought process
-
+# Version 1 Logs
 ## Setting up model
 
 These are the sequences to make the models based on the ERD
@@ -100,3 +99,9 @@ Here are some of the available queries and mutations on this published iteration
 - Get a modifier group by id
 - Create a new modifier group
 - Link a modifier to an item (component item only)
+
+# Version 2 Logs
+
+## Changelogs
+
+- 
