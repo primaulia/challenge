@@ -1,4 +1,5 @@
 # Version 1 Logs
+
 ## Setting up model
 
 These are the sequences to make the models based on the ERD
@@ -104,4 +105,19 @@ Here are some of the available queries and mutations on this published iteration
 
 ## Changelogs
 
-- 
+### DB migrations
+
+- Added `available`(boolean) column as per new challenge requirements.
+- Added `image_url`(string) column to store images for each items.
+- Updated dummy data to make the data richer and updated with the latest DB migrations.
+
+### Model updates
+
+- Create instance methods to automatically update the `display_order` column so it is aligned to the new requirements.
+- Updated the default scope for `Section` and `Item` to further utilize the `display_order` column.
+- Added new field on `Sections`, to make sure only `product`-type items are listed on the front end.
+
+### Integration
+
+- Add `cors` gem to allow cross domain access.
+- Add `Pixabay` API for creating the images based on item keyword.
