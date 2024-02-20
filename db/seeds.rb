@@ -6,8 +6,8 @@ Item.delete_all
 ModifierGroup.destroy_all
 
 puts 'Creating menus 🍳'
-menu1 = Menu.create!(label: 'Pizza Menu')
-menu2 = Menu.create!(label: 'Drinks Menu')
+menu1 = Menu.create!(label: 'Food')
+menu2 = Menu.create!(label: 'Drinks')
 
 puts 'Creating sections 🗒️'
 section1 = menu1.sections.create!(label: 'Classic Pizzas',
