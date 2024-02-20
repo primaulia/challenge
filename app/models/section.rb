@@ -8,17 +8,14 @@ class Section < ApplicationRecord
   has_many :items, through: :section_items
 
   before_destroy :destroy_associations
+  default_scope { joins(:menu_sections).order('menu_sections.display_order ASC') }
+
+  delegate :products, :components, to: :items
+
+  private
 
   def destroy_associations
     menu_sections.destroy_all
     section_items.destroy_all
-  end
-
-  def products
-    items.products
-  end
-
-  def components
-    items.components
   end
 end

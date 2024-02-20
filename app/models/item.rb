@@ -9,6 +9,8 @@ class Item < ApplicationRecord
   has_many :modifier_groups, through: :item_modifier_groups
   has_one :modifier
 
+  default_scope { joins(:section_items).order('section_items.display_order ASC') }
+
   scope :products, -> { where(item_type: :product) }
   scope :components, -> { where(item_type: :component) }
 end
